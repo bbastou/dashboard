@@ -21,10 +21,13 @@ export class TransilienService {
   }
 
   public getNextTrain = (codeGare:string = null):any => {
-    var departures = 'departures/';
-    var realTime = 'data_freshness';
-    // Prochains train au départ de la gare choisie dans la conf dans un intervalle d'une heure.
-    var url = this.actionUrl + config.networkUrl + config.gareUrl + departures + '?duration=3600&count=3';
+    let departures = 'departures';
+    let realTime = 'data_freshness=realtime';
+    let limit = 'count=' + config.limitResult;
+    let limitTime = 'duration=' + config.limitTime;
+
+    // Prochains train au départ de la gare choisie dans la conf dans un intervalle en secondes égal à config.limitTime.
+    var url = this.actionUrl + config.networkUrl + config.gareUrl + departures + '?' + realTime + '&' + limit + '&' + limitTime;
     return this._http.get(url,
       {
         headers: this.headers

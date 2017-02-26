@@ -5,5 +5,8 @@
   "coverage": "fr-idf/",
   "networkUrl": "networks/network:TN/",
   "gare": "stop_area:OIF:SA:8738246/",
-  "gareUrl": "stop_areas/stop_area:OIF:SA:8738246/"
+  "gareUrl": "stop_areas/stop_area:OIF:SA:8738246/",
+
+  "limitResult": 3,
+  "limitTime": 3600
 }
