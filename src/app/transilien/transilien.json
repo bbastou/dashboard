@@ -1,0 +1,9 @@
+{
+  "urlApi": "https://api.navitia.io/v1/",
+  "token": "7a155032-6a09-4de7-b69c-c07a4f2bbd86:",
+  "contentType": "application/json",
+  "coverage": "fr-idf/",
+  "networkUrl": "networks/network:TN/",
+  "gare": "stop_area:OIF:SA:8738246/",
+  "gareUrl": "stop_areas/stop_area:OIF:SA:8738246/"
+}
