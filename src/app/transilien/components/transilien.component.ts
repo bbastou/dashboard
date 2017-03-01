@@ -1,10 +1,10 @@
 import {Component} from "@angular/core";
-import {TransilienService} from "./transilien.service";
-import {Widgetable} from "../widget/widgetable";
+import {TransilienService} from "../services/transilien.service";
+import {Refreshable} from "../../common/refreshable";
 
 /**
  * Composant pour les prochains trains au départ.
- * {@link Widgetable}.
+ * {@link Refreshable}.
  */
 @Component({
   selector: 'app-transilien',
@@ -12,18 +12,19 @@ import {Widgetable} from "../widget/widgetable";
   styleUrls: ['./transilien.component.css'],
   providers: [TransilienService]
 })
-export class TransilienComponent extends Widgetable{
+export class TransilienComponent extends Refreshable {
   title:string;
-
+  hurriedTime: number;
   constructor(private transilienService:TransilienService) {
     super();
     this.title = 'Prochains trains';
+    this.hurriedTime = this.transilienService.config.hurriedTime;
   }
 
   /**
-   * @see {Widgetable#getData}
+   * @see {Refreshable#getData}
    * @returns {any}
-     */
+   */
   getData() {
     return this.transilienService.getNextTrain();
   }

@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TransilienComponent } from './transilien/transilien.component';
-import { WidgetComponent } from './widget/widget.component';
-import { WidgetDirective } from './widget/widget.directive';
-import {TransilienService} from "./transilien/transilien.service";
+import { TransilienComponent } from './transilien/components/transilien.component';
+import { WidgetComponent } from './widget/components/widget.component';
+import { WidgetDirective } from './widget/directives/widget.directive';
+import {TransilienService} from "./transilien/services/transilien.service";
 
 @NgModule({
   declarations: [

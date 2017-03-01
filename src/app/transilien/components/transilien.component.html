@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-2">
+    <i class="fa fa-train fa-5x" aria-hidden="true"></i>
+  </div>
+  <div *ngFor="let train of data" class="col-md-10">
+    <div class="col-md-9">
+      <strong>{{train.direction}}</strong>
+      <span class="text-right text-muted small"><em>{{train.horairePrevu | date: 'HH:mm'}}</em></span>
+    </div>
+    <div class="col-md-3">
+      <span *ngIf="train.arriveDans <= hurriedTime" class="badge alert-danger"> {{train.arriveDans}} min</span>
+      <span *ngIf="train.arriveDans > hurriedTime" class="badge alert-success"> {{train.arriveDans}} min</span>
+    </div>
+  </div>
+</div>

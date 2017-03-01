@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Response} from '@angular/http';
-import {Train} from "./train";
+import {Train} from "../models/train";
 import * as moment from 'moment';
 /**
  * Classe utilitaire pour le module Transilien.

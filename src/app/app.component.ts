@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {TransilienService} from "./transilien/transilien.service";
+import {TransilienService} from "./transilien/services/transilien.service";
 
 @Component({
   selector: 'app-root',

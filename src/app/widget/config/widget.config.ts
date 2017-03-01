@@ -1,4 +1,4 @@
-import {TransilienComponent} from "../transilien/transilien.component";
+import {TransilienComponent} from "../../transilien/components/transilien.component";
 import {Injectable} from "@angular/core";
 
 /**

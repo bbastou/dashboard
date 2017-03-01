@@ -6,8 +6,8 @@ import {
   ComponentFactoryResolver,
   ViewContainerRef
 } from "@angular/core";
-import {WidgetDirective} from "./widget.directive";
-import {WidgetConfig} from "./widget.config";
+import {WidgetDirective} from "../directives/widget.directive";
+import {WidgetConfig} from "../config/widget.config";
 
 /**
  * Composant servant de capsule aux widgets.

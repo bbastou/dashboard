@@ -4,7 +4,7 @@ import {Observable} from "rxjs/Rx";
 /**
  * Classe abstraire regroupant les fonctions communes aux 'widgets'.
  */
-export abstract class Widgetable implements OnInit {
+export abstract class Refreshable implements OnInit {
 
   /** Objet timer nécessaire pour le rafraichissement de la page. */
   timer;
