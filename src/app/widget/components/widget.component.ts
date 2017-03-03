@@ -21,7 +21,16 @@ import {WidgetConfig} from "../config/widget.config";
 export class WidgetComponent implements AfterContentInit {
 
   // Composant injecté dans
-  injectedComponent;
+  private injectedComponent;
+
+  private widthClass;
+
+  private title:string;
+
+  constructor(private componentFactoryResolver:ComponentFactoryResolver) {
+
+  }
+
   ngAfterContentInit():void {
 
     let componentName = WidgetConfig.nameToComponentBinding[this.widgetDirective.widgetName];
@@ -32,19 +41,14 @@ export class WidgetComponent implements AfterContentInit {
     let component = this.widget.createComponent(compFactory);
     this.injectedComponent = component.injector.get(componentName)
     this.title = this.injectedComponent.title;
-
+    this.widthClass = 'col-md-' + this.widgetDirective.widgetWidth;
   }
 
-  title:string;
-
-  constructor(private componentFactoryResolver:ComponentFactoryResolver) {
-
-  }
 
   /**
    * Méthode appelée lors d'un cliq sur le bouton de rafraihchissement dans le header du panel.
    */
-  callRefresh(): void {
+  callRefresh():void {
     this.injectedComponent.refreshData();
   }
 

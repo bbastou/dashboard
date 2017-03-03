@@ -1,0 +1,5 @@
+<div class="col-md-6" *ngFor="let meteo of data">
+  <span class="text-muted"><em>{{meteo.heure}}</em></span>
+  <i [ngClass]="meteo.icon" class="wi wi-5"> {{meteo.temperature | number : '1.0-0'}}</i>
+  <i class="wi wi-celsius wi-5"></i>
+</div>

@@ -4,8 +4,8 @@
   </div>
   <div *ngFor="let train of data" class="col-md-10">
     <div class="col-md-9">
+      <span class="text-right text-muted small"><em>{{train.horairePrevu | date: 'HH:mm'}}</em> - </span>
       <strong>{{train.direction}}</strong>
-      <span class="text-right text-muted small"><em>{{train.horairePrevu | date: 'HH:mm'}}</em></span>
     </div>
     <div class="col-md-3">
       <span *ngIf="train.arriveDans <= hurriedTime" class="badge alert-danger"> {{train.arriveDans}} min</span>

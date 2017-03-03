@@ -30,6 +30,7 @@ export class TransilienService {
 
     // Prochains train au départ de la gare choisie dans la conf dans un intervalle en secondes égal à config.limitTime.
     var url = this.actionUrl + this.config.networkUrl + this.config.gareUrl + departures + '?' + realTime + '&' + limit + '&' + limitTime;
+
     return this._http.get(url,
       {
         headers: this.headers

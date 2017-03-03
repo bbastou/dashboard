@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {TransilienService} from "../services/transilien.service";
-import {Refreshable} from "../../common/refreshable";
+import {Refreshable} from "../../shared/refreshable";
 
 /**
  * Composant pour les prochains trains au départ.

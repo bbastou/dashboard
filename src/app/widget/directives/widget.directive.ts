@@ -9,5 +9,5 @@ import {Directive, Input} from "@angular/core";
 export class WidgetDirective {
 
   @Input('widgetName') widgetName:string;
-
+  @Input('widgetWidth') widgetWidth: number;
 }

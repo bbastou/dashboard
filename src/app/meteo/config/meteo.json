@@ -1,0 +1,14 @@
+{
+  "latitudeHome": 48.8652030,
+  "longitudeHome": 2.0943300,
+
+  "latitudeWork": 48.8876970,
+  "longitudeWork": 2.2151270,
+
+  "urlApi": "https://api.darksky.net/forecast/",
+  "contentType": "application/json",
+  "token": "da98d852765b844b2dd9ec7b33a7aa66",
+
+  "langage": "fr",
+  "unitSystem": "si"
+}

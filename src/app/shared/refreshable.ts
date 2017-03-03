@@ -41,8 +41,8 @@ export abstract class Refreshable implements OnInit {
    * Méthode permetttant de s'abonner pour permettre aux données de se mettre à jour lorsqu'elle sont rafraichies.
    */
   protected refreshData() {
-    this.subscriptor = this.getData().subscribe(trains => {
-      this.data = trains;
+    this.subscriptor = this.getData().subscribe(res => {
+      this.data = res;
       this.subscribeData();
     });
   }
